@@ -1,0 +1,172 @@
+@keyframes slideshow {
+	10% {left: 0;}
+	20% {left: 0;}
+	30% {left: -100%;}
+	40% {left: -100%;}
+	50% {left: -200%;}
+	60% {left: -200%;}
+	70% {left: -300%;}
+	80% {left: -300%;}
+	90% {left: -400%;}
+	100% {left: -400%}
+}
+
+#img_container{overflow:hidden;width:50%;margin:5px auto; border: 5px solid transparent;border-radius: 10px;}
+#img_container figure img{width:20%;float:left;}
+#img_container figure{position:relative;width:500%;margin:0;left:0;text-align:left;animation:20s slideshow infinite}
+
+@media screen and (max-width: 767px) {#slider {overflow: hidden; width: 100%; margin: 0 auto;}}
+#img_container {
+  position: fixed;
+  top: 170px;
+  left: 730px;
+  width: 600px;
+  height: 360px;
+  margin: 0%;
+}
+#categories { 
+  position: fixed;
+  left: 20px;
+  top: 196px;
+  width: 500px;
+  font-size: 24px;
+  text-align: left;
+  color: black;
+  } 
+#items { 
+    position: fixed; 
+    left:380px; 
+    bottom:345px; 
+    width: 500px; 
+    font-size: 24px; 
+    text-align: left; 
+    color: black;
+  } 
+  #login { 
+    position: fixed;
+    top: 20px;
+    font-size: 24px;
+    height: 66px;
+    width: 100%;
+    margin: -8px;
+    background-color: black;
+}
+  .heading_1 {
+    color: black;
+    position: fixed;
+    top: 79px;
+  }
+  #Catalog_App {
+    position: fixed; 
+    width:500px ;
+    left: 150px;
+    top:-20px;
+    color: white;
+  } 
+  #login_button {
+    position: fixed;
+    background-color: white;
+    left: 1005px;
+    top: 25px;
+    font-size: 24px;  
+  }
+#item_of_description{
+  position: fixed;
+  left: 60px;
+  top: 125px;
+  font-size: 35px;  
+}
+#the_description{
+  position: fixed;
+  left: 60px;
+  top: 180px;
+}
+#add_item_button {
+  position: fixed;
+  background-color: white;
+  left: 448px;
+  top: 490px;
+  font-size: 24px;  
+}
+#Confirm {
+  position: fixed;
+  left: 448px;
+  top: 490px;
+  font-size: 24px;
+  background-color: navajowhite;  
+}
+#item_name {
+  position: fixed;
+  left: 448px;
+  top: 140px;
+}
+#item_description {
+  position: fixed;
+  left: 448px;
+  top: 230px;
+  width: 25%;
+  height: 15%;
+}
+#name_1 {
+  position: fixed;
+  left: 300px;
+  top: 115px;
+}
+#description_1 {
+  position: fixed;
+  left: 245px;
+  top: 205px;
+}
+#categories_select{
+  position: fixed;
+  left: 448px;
+  top: 380px;
+  font-size: 120%;
+}
+#select_category{
+  position: fixed;
+  left: 320px;
+  top: 355px;
+}
+#edit_button {
+  position: fixed;
+  background-color: white;
+  left: 345px;
+  top: 490px;
+  font-size: 24px;  
+}
+#delete_button {
+  position: fixed;
+  background-color: white;
+  left: 420px;
+  top: 490px;
+  font-size: 24px;  
+}
+#pas_text{
+  position: fixed;
+  left: 200px;
+  top: 337px;
+}
+#pas {
+  position: fixed;
+  left: 25px;
+  top: 315px;
+}
+#signin {
+  position: fixed;
+  left: 180px;
+  top: 400px;
+  font-size: 24px;
+  background-color: navajowhite;  
+}
+#signinButton {
+  position: fixed;
+  background-color: white;
+  left: 420px;
+  top: 260px;
+  font-size: 20px;  
+}
+#login_15 {
+  position: fixed;
+  left: 200px;
+  top: 155px;} 
