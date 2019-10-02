@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel=stylesheet type=text/css href="{{url_for('static',filename='stylesheet.css')}}"></link>
+    </head>
+    <body id="the_body">
+        <div id="login">
+        <h1 id="Catalog_App">Catalog App</h1>
+        <a href="{{url_for('showLogin')}}">
+            <button id="login_button">
+                <span aria-hidden="true"></span>login
+            </button>
+        </a>
+        </div>
+        <h1 id="item_of_description">{{item_name}}:</h1>
+        {% for item in items %}
+        {% if item.item_name == item_name%}
+        <h2 id="the_description">{{item.description}}</h2>
+        {% endif %}
+        {% endfor %}
+    </body>
+</html>

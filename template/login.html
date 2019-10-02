@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel=stylesheet type=text/css href="{{url_for('static',filename='stylesheet.css')}}"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer></script>
+        <script>
+          function start() {
+            gapi.load('auth2', function() {
+              auth2 = gapi.auth2.init({
+                client_id: '1064227065557-0m7ufhf2k945jneq2rm9jgqivddmtv8n.apps.googleusercontent.com'
+              });
+            });
+          }
+        </script>            
+      </head>
+    <body id="the_body">
+        <div id="login">
+        <h1 id="Catalog_App">Catalog App</h1>
+        </div>
+    <h3 id="login_15">sorry in this version of catalog App you can only sign in with google right now :</h3>    
+
+<button id="signinButton">Sign in with Google</button>
+<div id="result"></div>
+
+<script>
+  $('#signinButton').click(function() {
+    function signInCallback(authResult){
+      if (authResult['code']){
+        $('#signinButton').attr('style', 'display: none');
+        $.ajax({
+          type: 'POST',
+          url: '/gconnect?state={{STATE}}',
+          headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+          },
+          contentType: 'application/octet-stream; charset=utf-8',
+          success:function(result){
+            $('#result').html('Login Successful!</br>'+ result + '</br>Redirecting...')
+                 setTimeout(function() {
+                  window.location.href = "/loggedIn";
+                 }, 2000);
+          },
+          processData:false,
+          data:authResult['code']
+        });
+      } else{
+        // handle error
+        console.log('There was an error: ' + authResult['error']);
+        $('#result').html('Failed to make a server-side call. Check your configuration and console.');
+      }
+    }
+    auth2.grantOfflineAccess().then(signInCallback);
+  });
+</script>
+    </body>
+</html>
+

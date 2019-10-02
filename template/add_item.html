@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel=stylesheet type=text/css href="{{url_for('static',filename='stylesheet.css')}}"></link>
+    </head>
+    <body id="the_body">
+        <div id="categories">
+        <h1 class="heading_1">Categories</h1>
+        {% for cat in categories %}
+        <a href = "{{url_for('specific_category_1',category_name = cat.cat_name )}}" style="text-decoration-line: none">{{ cat.cat_name }}</a><br>
+        {% endfor %}
+        </div>
+        <div id="items">
+        <h1 class="heading_1" id="latest_items">Latest Items</h1>
+        {% for item in items %}
+        {{item.item_name}}
+        ({{item.cat_name}})<br>
+        {% endfor %}
+        </div>
+        <div id="login">
+        <h1 id="Catalog_App">Catalog App</h1>
+        <a href="{{url_for('categories_print')}}">
+            <button id="login_button">
+                <span aria-hidden="true"></span>logout
+            </button>
+        </a>
+        </div>
+        <div id="img_container">
+        <figure>
+        <img src="{{url_for('static' , filename='imgs/skating.jpg')}}" width="600" height="360" class="slide_show">                                                   
+        <img src="{{url_for('static' , filename='imgs/snowboarding.jpg')}}" width="600" height="360" class="slide_show">
+        <img src="{{url_for('static' , filename='imgs/soccer.jpg')}}" width="600" height="360" class="slide_show">
+        <img src="{{url_for('static' , filename='imgs/football.jpg')}}" width="600" height="360" class="slide_show"> 
+        <img src="{{url_for('static' , filename='imgs/basketball.jpg')}}" width="600" height="360" class="slide_show">    
+        </figure>
+        </div>
+        <a href="{{url_for('add_item_details')}}">
+            <button id="add_item_button">
+                <span aria-hidden="true"></span>add item
+            </button>
+        </a>
+    </body>
+</html>

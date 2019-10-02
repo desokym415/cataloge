@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = stylesheet type = text/css href = "{{url_for('static',filename='stylesheet.css')}}"></link>
+    </head>
+    <body id = "the_body">
+        <div id = "login">
+        <h1 id = "Catalog_App">Catalog App</h1>
+        <a href="{{url_for('categories_print')}}">
+            <button id = "login_button">
+                <span aria-hidden="true"></span>logout
+            </button>
+        </a>
+        </div>
+        <form action="#" method="POST">
+        <button type="submit" id="Confirm" type="submit">
+        <span aria-hidden="true"></span>Confirm</button>
+        <input type = "text" name="item_name" id="item_name" required >
+        <input type = "text" name="item_description" id="item_description">
+        <h2 id = "name_1">Item Name</h2>
+        <h2 id = "description_1">Item Description</h2>
+        <h2 id = "select_category">Category</h2>
+        <select id = "categories_select" name = "categories_select">
+            <option value="Snowboarding">Snowboarding</option>
+            <option value="Soccer">Soccer</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Baseball">Baseball</option>
+            <option value="Frisbee">Frisbee</option>
+            <option value="Football">Football</option>
+            <option value="Skating">Skating</option>
+            <option value="Hockey">Hockey</option>
+            <option value="Rock climbing">Rock climbing</option>
+        </select>
+        </form>
+    </body>
+</html>>
